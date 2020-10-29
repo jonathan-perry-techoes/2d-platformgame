@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     private bool grounded;
 
+    private bool doubleJumped;
+
     void Start()
     {
 
@@ -24,11 +26,20 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (grounded)
+            doubleJumped = false;
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             // Make it jump!
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, jumpHeight);
+            Jump();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && !doubleJumped && !grounded)
+        {
+            Jump();
+            doubleJumped = true;
+        }
+
         // If user goes right
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -42,5 +53,10 @@ public class PlayerController : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
 
+    }
+
+    public void Jump()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, jumpHeight);
     }
 }
