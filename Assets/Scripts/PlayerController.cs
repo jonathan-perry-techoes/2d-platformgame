@@ -7,13 +7,21 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpHeight;
 
+    public Transform groundCheck;
+    public float groundCheckRadius;
+    public LayerMask whatIsGround;
+    private bool grounded;
 
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+    void FixedUpdate()
+    {
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
