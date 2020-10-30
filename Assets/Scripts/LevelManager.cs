@@ -16,6 +16,8 @@ public class LevelManager : MonoBehaviour
 
     public float respawnDelay;
 
+    private float gravityStore;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,18 +41,19 @@ public class LevelManager : MonoBehaviour
         // Disable the player and renderer
         player.enabled = false;
         player.GetComponent<Renderer>().enabled = false;
+        gravityStore = player.GetComponent<Rigidbody2D>().gravityScale;
         // Zero the velocity of the player to prevent sliding on death
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         // Subtract points from coins for death penalty
         ScoreManager.AddPoints(-pointPenaltyOnDeath);
         // Put a pause between death and respawn
         yield return new WaitForSeconds(respawnDelay);
+        player.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
+        // Respawn player to first checkpoint
+        player.transform.position = currentCheckpoint.transform.position;
         // Re-enable both the player and renderer
         player.enabled = true;
         player.GetComponent<Renderer>().enabled = true;
-        // Respawn player to first checkpoint
-        player.transform.position = currentCheckpoint.transform.position;
         Instantiate(respawnParticle, currentCheckpoint.transform.position, currentCheckpoint.transform.rotation);
-
     }
 }
