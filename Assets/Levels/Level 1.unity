@@ -6095,6 +6095,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCheckpoint: {fileID: 1738752814}
+  deathParticle: {fileID: 8750019880227016662, guid: 744a6304829d042269b019d00b7ffd17, type: 3}
+  respawnParticle: {fileID: 4147127126267818189, guid: 398e1e14f5c4244e9998fedb62309cb4, type: 3}
+  respawnDelay: 1
 --- !u!1 &2083153971
 GameObject:
   m_ObjectHideFlags: 0
