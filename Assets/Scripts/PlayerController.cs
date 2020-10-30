@@ -14,9 +14,11 @@ public class PlayerController : MonoBehaviour
 
     private bool doubleJumped;
 
+    private Animator anim;
+
     void Start()
     {
-
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -28,6 +30,9 @@ public class PlayerController : MonoBehaviour
     {
         if (grounded)
             doubleJumped = false;
+
+        anim.SetBool("Grounded", grounded);
+
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             // Make it jump!
@@ -53,6 +58,13 @@ public class PlayerController : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
 
+        // Set animation speed float value to the value of the players horiz velocity
+        anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+
+        if (GetComponent<Rigidbody2D>().velocity.x > 0)
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        else if (GetComponent<Rigidbody2D>().velocity.x < 0)
+            transform.localScale = new Vector3(-1f, 1f, 1f);
     }
 
     public void Jump()
