@@ -34,9 +34,11 @@ public class LevelManager : MonoBehaviour
     {
         // Launch the blood death particle system anim
         Instantiate(deathParticle, player.transform.position, player.transform.rotation);
-        // Disable the player
+        // Disable the player and renderer
         player.enabled = false;
         player.GetComponent<Renderer>().enabled = false;
+        // Zero the velocity of the player to prevent sliding on death
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         // Put a pause between death and respawn
         yield return new WaitForSeconds(respawnDelay);
         // Re-enable both the player and renderer

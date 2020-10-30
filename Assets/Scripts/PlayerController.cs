@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
+    private float moveVelocity;
     public float jumpHeight;
 
     public Transform groundCheck;
@@ -45,18 +46,23 @@ public class PlayerController : MonoBehaviour
             doubleJumped = true;
         }
 
+        // Set move velocity to 0
+        moveVelocity = 0f;
+
         // If user goes right
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            // Make it jump!
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            // Apply force to move right
+            moveVelocity = moveSpeed;
         }
         // If user goes left
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            // Make it jump!
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            // Apply force to move left
+            moveVelocity = -moveSpeed;
         }
+
+        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
 
         // Set animation speed float value to the value of the players horiz velocity
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
