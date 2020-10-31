@@ -79,11 +79,13 @@ public class PlayerController : MonoBehaviour
         if (knockbackCount <= 0)
         {
             myrigidbody2D.velocity = new Vector2(moveVelocity, myrigidbody2D.velocity.y);
-        } else {
+        }
+        else
+        {
             if (knockFromRight)
-                myrigidbody2D.velocity=new Vector2(-knockback, knockback);
+                myrigidbody2D.velocity = new Vector2(-knockback, knockback);
             if (!knockFromRight)
-                            myrigidbody2D.velocity=new Vector2(knockback, knockback);
+                myrigidbody2D.velocity = new Vector2(knockback, knockback);
             knockbackCount -= Time.deltaTime;
         }
 
@@ -110,6 +112,14 @@ public class PlayerController : MonoBehaviour
                 shotDelayCounter = shotDelay;
                 Instantiate(ninjaStar, firePoint.position, firePoint.rotation);
             }
+        }
+
+        if (anim.GetBool("Sword"))
+            anim.SetBool("Sword", false);
+
+        if (Input.GetKey(KeyCode.L))
+        {
+            anim.SetBool("Sword", true);
         }
     }
 
