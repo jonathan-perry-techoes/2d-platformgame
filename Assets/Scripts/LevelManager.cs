@@ -41,7 +41,9 @@ public class LevelManager : MonoBehaviour
         // Disable the player and renderer
         player.enabled = false;
         player.GetComponent<Renderer>().enabled = false;
+        // Get the gravity value and set players to zero
         gravityStore = player.GetComponent<Rigidbody2D>().gravityScale;
+        player.GetComponent<Rigidbody2D>().gravityScale = 0f;
         // Zero the velocity of the player to prevent sliding on death
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         // Subtract points from coins for death penalty
