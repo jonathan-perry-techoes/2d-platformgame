@@ -44,6 +44,9 @@ TextureImporter:
   - first:
       213: 6856404424955050984
     second: Player_Sword
+  - first:
+      213: 1079164134371101101
+    second: Level Exit
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -424,7 +427,7 @@ TextureImporter:
         width: 9
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -432,6 +435,27 @@ TextureImporter:
       bones: []
       spriteID: 8ebbcd96f77d62f50800000000000000
       internalID: 6856404424955050984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level Exit
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 48
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da908830016f9fe00800000000000000
+      internalID: 1079164134371101101
       vertices: []
       indices: 
       edges: []
