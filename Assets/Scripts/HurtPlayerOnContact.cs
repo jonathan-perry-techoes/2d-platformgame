@@ -22,6 +22,7 @@ public class HurtPlayerOnContact : MonoBehaviour
         if (other.name == "Player")
         {
             HealthManager.HurtPlayer(damageToGive);
+            other.GetComponent<AudioSource>().Play();
         }
     }
 
