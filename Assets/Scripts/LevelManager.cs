@@ -59,6 +59,8 @@ public class LevelManager : MonoBehaviour
         player.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
         // Respawn player to first checkpoint
         player.transform.position = currentCheckpoint.transform.position;
+        // Reset knockback count
+        player.knockbackCount = 0;
         // Re-enable both the player and renderer
         player.enabled = true;
         player.GetComponent<Renderer>().enabled = true;

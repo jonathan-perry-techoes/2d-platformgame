@@ -23,6 +23,11 @@ public class PlayerController : MonoBehaviour
     public float shotDelay;
     private float shotDelayCounter;
 
+    public float knockback;
+    public float knockbackLength;
+    public float knockbackCount;
+    public bool knockFromRight;
+
     private Rigidbody2D myrigidbody2D;
 
     void Start()
@@ -71,7 +76,16 @@ public class PlayerController : MonoBehaviour
             moveVelocity = -moveSpeed;
         }
 
-        myrigidbody2D.velocity = new Vector2(moveVelocity, myrigidbody2D.velocity.y);
+        if (knockbackCount <= 0)
+        {
+            myrigidbody2D.velocity = new Vector2(moveVelocity, myrigidbody2D.velocity.y);
+        } else {
+            if (knockFromRight)
+                myrigidbody2D.velocity=new Vector2(-knockback, knockback);
+            if (!knockFromRight)
+                            myrigidbody2D.velocity=new Vector2(knockback, knockback);
+            knockbackCount -= Time.deltaTime;
+        }
 
         // Set animation speed float value to the value of the players horiz velocity
         anim.SetFloat("Speed", Mathf.Abs(myrigidbody2D.velocity.x));
