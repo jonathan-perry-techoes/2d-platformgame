@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
 
     private Animator anim;
 
+    public Transform firePoint;
+    public GameObject ninjaStar;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -71,6 +74,11 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
         else if (GetComponent<Rigidbody2D>().velocity.x < 0)
             transform.localScale = new Vector3(-1f, 1f, 1f);
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Instantiate(ninjaStar, firePoint.position, firePoint.rotation);
+        }
     }
 
     public void Jump()

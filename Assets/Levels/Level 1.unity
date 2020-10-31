@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 65048244}
   - component: {fileID: 65048243}
   - component: {fileID: 65048242}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 79473973}
   - component: {fileID: 79473972}
   - component: {fileID: 79473971}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 89298946}
   - component: {fileID: 89298945}
   - component: {fileID: 89298944}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 112358578}
   - component: {fileID: 112358577}
   - component: {fileID: 112358576}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1432,6 +1432,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &166246120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 166246121}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &166246121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166246120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 438428650}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &212003963
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,7 +2212,7 @@ GameObject:
   - component: {fileID: 400348724}
   m_Layer: 0
   m_Name: Enemy_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2273,7 +2303,7 @@ Transform:
   - {fileID: 701208279}
   - {fileID: 1024390856}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &400348721
 CircleCollider2D:
@@ -2489,7 +2519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2633262153861923200, guid: 52c90def17823493798cfc9a6900d25c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2633262153861923200, guid: 52c90def17823493798cfc9a6900d25c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2592,10 +2622,10 @@ Transform:
   m_LocalPosition: {x: 42, y: -1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 519420032}
   - {fileID: 1587020337}
+  - {fileID: 166246121}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &438428651
 Rigidbody2D:
@@ -2653,6 +2683,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  firePoint: {fileID: 166246121}
+  ninjaStar: {fileID: 650478475708559994, guid: 24becd81d10f24c00860c94cb639383b, type: 3}
 --- !u!95 &438428654
 Animator:
   serializedVersion: 3
@@ -3010,6 +3042,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3025,6 +3058,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3514deba1033c4daab142cabed9d8219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  isFollowing: 0
+  xOffset: 0
+  yOffset: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -3076,10 +3125,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 42, y: -0.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 438428650}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &574371406
@@ -3555,7 +3604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2633262153861923200, guid: 52c90def17823493798cfc9a6900d25c, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2633262153861923200, guid: 52c90def17823493798cfc9a6900d25c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4323,7 +4372,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &982913553
 GameObject:
@@ -4416,7 +4465,7 @@ Transform:
   - {fileID: 643654597}
   - {fileID: 110362767}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992582668
 GameObject:
@@ -4648,7 +4697,7 @@ GameObject:
   - component: {fileID: 1003749531}
   - component: {fileID: 1003749530}
   - component: {fileID: 1003749529}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5255,7 +5304,7 @@ Transform:
   - {fileID: 89298943}
   - {fileID: 1133345303}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1130487873
 GameObject:
@@ -5378,7 +5427,7 @@ GameObject:
   - component: {fileID: 1133345306}
   - component: {fileID: 1133345305}
   - component: {fileID: 1133345304}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5491,7 +5540,7 @@ GameObject:
   - component: {fileID: 1198895635}
   - component: {fileID: 1198895634}
   - component: {fileID: 1198895633}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5738,7 +5787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8648208706359045120, guid: 48485d5a056f64e31815bc33fd37b929, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8648208706359045120, guid: 48485d5a056f64e31815bc33fd37b929, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6315,7 +6364,7 @@ GameObject:
   - component: {fileID: 1485760396}
   - component: {fileID: 1485760395}
   - component: {fileID: 1485760394}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6755,7 +6804,7 @@ GameObject:
   - component: {fileID: 1523495585}
   - component: {fileID: 1523495584}
   - component: {fileID: 1523495583}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6993,7 +7042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 438428650}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1625255126
 GameObject:
@@ -7088,7 +7137,7 @@ RectTransform:
   - {fileID: 334142528}
   - {fileID: 23306942}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7216,7 +7265,7 @@ GameObject:
   - component: {fileID: 1647826941}
   - component: {fileID: 1647826940}
   - component: {fileID: 1647826943}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8097,7 +8146,7 @@ GameObject:
   - component: {fileID: 1840778683}
   - component: {fileID: 1840778682}
   - component: {fileID: 1840778681}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8921,7 +8970,7 @@ Transform:
   m_LocalScale: {x: 120, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2048308340
 GameObject:
@@ -9170,7 +9219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2059402354
 MonoBehaviour:
@@ -9310,7 +9359,7 @@ GameObject:
   - component: {fileID: 2086577905}
   - component: {fileID: 2086577904}
   - component: {fileID: 2086577903}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Coin_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9666,7 +9715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2633262153861923200, guid: 52c90def17823493798cfc9a6900d25c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2633262153861923200, guid: 52c90def17823493798cfc9a6900d25c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9723,7 +9772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8648208706359045120, guid: 48485d5a056f64e31815bc33fd37b929, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8648208706359045120, guid: 48485d5a056f64e31815bc33fd37b929, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
