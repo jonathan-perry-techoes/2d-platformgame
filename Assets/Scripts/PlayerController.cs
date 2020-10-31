@@ -23,9 +23,12 @@ public class PlayerController : MonoBehaviour
     public float shotDelay;
     private float shotDelayCounter;
 
+    private Rigidbody2D myrigidbody2D;
+
     void Start()
     {
         anim = GetComponent<Animator>();
+        myrigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -68,14 +71,14 @@ public class PlayerController : MonoBehaviour
             moveVelocity = -moveSpeed;
         }
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+        myrigidbody2D.velocity = new Vector2(moveVelocity, myrigidbody2D.velocity.y);
 
         // Set animation speed float value to the value of the players horiz velocity
-        anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+        anim.SetFloat("Speed", Mathf.Abs(myrigidbody2D.velocity.x));
 
-        if (GetComponent<Rigidbody2D>().velocity.x > 0)
+        if (myrigidbody2D.velocity.x > 0)
             transform.localScale = new Vector3(1f, 1f, 1f);
-        else if (GetComponent<Rigidbody2D>().velocity.x < 0)
+        else if (myrigidbody2D.velocity.x < 0)
             transform.localScale = new Vector3(-1f, 1f, 1f);
 
         if (Input.GetKeyDown(KeyCode.Return))
@@ -98,6 +101,6 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, jumpHeight);
+        myrigidbody2D.velocity = new Vector2(0, jumpHeight);
     }
 }
