@@ -16,12 +16,18 @@ public class LevelManager : MonoBehaviour
 
     public float respawnDelay;
 
+    private CameraController camera;
+
     private float gravityStore;
+
+    public HealthManager healthManager;
 
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        camera = FindObjectOfType<CameraController>();
+        healthManager = FindObjectOfType<HealthManager>();
     }
 
     // Update is called once per frame
@@ -56,6 +62,9 @@ public class LevelManager : MonoBehaviour
         // Re-enable both the player and renderer
         player.enabled = true;
         player.GetComponent<Renderer>().enabled = true;
+        // Set back to full heatlh
+        healthManager.FullHealth();
+        healthManager.isDead = false;
         Instantiate(respawnParticle, currentCheckpoint.transform.position, currentCheckpoint.transform.rotation);
     }
 }

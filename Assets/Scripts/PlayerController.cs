@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
     public Transform firePoint;
     public GameObject ninjaStar;
 
+    public float shotDelay;
+    private float shotDelayCounter;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -78,6 +81,18 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             Instantiate(ninjaStar, firePoint.position, firePoint.rotation);
+            shotDelayCounter = shotDelay;
+        }
+
+        if (Input.GetKey(KeyCode.Return))
+        {
+            shotDelayCounter -= Time.deltaTime;
+
+            if (shotDelayCounter <= 0)
+            {
+                shotDelayCounter = shotDelay;
+                Instantiate(ninjaStar, firePoint.position, firePoint.rotation);
+            }
         }
     }
 

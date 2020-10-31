@@ -139,3 +139,5 @@ MonoBehaviour:
   enemyDeathEffect: {fileID: 8750019880227016662, guid: 744a6304829d042269b019d00b7ffd17, type: 3}
   impactEffect: {fileID: 2303017399531991161, guid: fbd409854cbed417ca9e196b43696405, type: 3}
   pointsForKill: 200
+  rotationSpeed: -360
+  damageToGive: 1
