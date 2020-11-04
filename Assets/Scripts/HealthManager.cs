@@ -12,12 +12,15 @@ public class HealthManager : MonoBehaviour
 
     public bool isDead;
 
+    private LifeManager lifeSystem;
+
     // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<Text>();
         playerHealth = maxPlayerHealth;
         levelManager = FindObjectOfType<LevelManager>();
+        lifeSystem = FindObjectOfType<LifeManager>();
         isDead = false;
     }
 
@@ -28,6 +31,7 @@ public class HealthManager : MonoBehaviour
         {
             playerHealth = 0;
             levelManager.RespawnPlayer();
+            lifeSystem.TakeLife();
             isDead = true;
         }
         text.text = "" + playerHealth;

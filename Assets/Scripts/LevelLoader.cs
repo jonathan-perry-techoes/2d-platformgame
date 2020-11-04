@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
@@ -18,7 +17,7 @@ public class LevelLoader : MonoBehaviour
     {
         if (Input.GetAxisRaw("Vertical") > 0 && playerInZone)
         {
-            Application.LoadLevel(levelToLoad);
+            SceneManager.LoadScene(levelToLoad);
         }
     }
 
