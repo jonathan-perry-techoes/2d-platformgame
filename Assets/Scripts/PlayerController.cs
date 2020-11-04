@@ -48,33 +48,20 @@ public class PlayerController : MonoBehaviour
 
         anim.SetBool("Grounded", grounded);
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (Input.GetButtonDown("Jump") && grounded)
         {
             // Make it jump!
             Jump();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !doubleJumped && !grounded)
+        if (Input.GetButtonDown("Jump") && !doubleJumped && !grounded)
         {
             Jump();
             doubleJumped = true;
         }
 
-        // Set move velocity to 0
-        moveVelocity = 0f;
-
-        // If user goes right
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            // Apply force to move right
-            moveVelocity = moveSpeed;
-        }
-        // If user goes left
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            // Apply force to move left
-            moveVelocity = -moveSpeed;
-        }
+        // Get movement from horizontal axis
+        moveVelocity = moveSpeed * Input.GetAxisRaw("Horizontal");
 
         if (knockbackCount <= 0)
         {
@@ -97,13 +84,13 @@ public class PlayerController : MonoBehaviour
         else if (myrigidbody2D.velocity.x < 0)
             transform.localScale = new Vector3(-1f, 1f, 1f);
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(ninjaStar, firePoint.position, firePoint.rotation);
             shotDelayCounter = shotDelay;
         }
 
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetButton("Fire1"))
         {
             shotDelayCounter -= Time.deltaTime;
 
@@ -117,7 +104,7 @@ public class PlayerController : MonoBehaviour
         if (anim.GetBool("Sword"))
             anim.SetBool("Sword", false);
 
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetButtonDown("Fire2"))
         {
             anim.SetBool("Sword", true);
         }
