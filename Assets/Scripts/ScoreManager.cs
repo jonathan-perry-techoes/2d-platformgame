@@ -10,8 +10,8 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         text = GetComponent<Text>();
-
-        score = 0;
+        // Get score from player prefs between scenes
+        score = PlayerPrefs.GetInt("CurrentPlayerScore");
     }
 
     void Update()
@@ -25,11 +25,13 @@ public class ScoreManager : MonoBehaviour
     public static void AddPoints(int pointsToAdd)
     {
         score += pointsToAdd;
+        PlayerPrefs.SetInt("CurrentPlayerScore", score);
     }
 
     public static void Reset()
     {
         score = 0;
+        PlayerPrefs.SetInt("CurrentPlayerScore", score);
     }
 
 }

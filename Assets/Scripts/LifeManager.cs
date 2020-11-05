@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 public class LifeManager : MonoBehaviour
 {
-    public int startingLives;
+    //public int startingLives;
     private int lifeCounter;
 
     private Text theText;
@@ -19,7 +21,7 @@ public class LifeManager : MonoBehaviour
     void Start()
     {
         theText = GetComponent<Text>();
-        lifeCounter = startingLives;
+        lifeCounter = PlayerPrefs.GetInt("PlayerCurrentLives");
         // Get the player object
         player = FindObjectOfType<PlayerController>();
     }
@@ -43,17 +45,20 @@ public class LifeManager : MonoBehaviour
         // Start the game over again
         if (waitAfterGameOver < 0)
         {
-            Application.LoadLevel(mainMenu);
+            SceneManager.LoadScene(mainMenu);
         }
     }
 
     public void GiveLife()
     {
         lifeCounter++;
+        PlayerPrefs.SetInt("PlayerCurrentLives", lifeCounter);
     }
     public void TakeLife()
     {
         lifeCounter--;
+        PlayerPrefs.SetInt("PlayerCurrentLives", lifeCounter);
+
     }
 
 }
