@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 438428653}
   - component: {fileID: 438428654}
   - component: {fileID: 438428655}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1009,6 +1009,8 @@ MonoBehaviour:
   knockbackLength: 0.2
   knockbackCount: 0
   knockFromRight: 0
+  onLadder: 0
+  ClimbSpeed: 0
 --- !u!95 &438428654
 Animator:
   serializedVersion: 3
