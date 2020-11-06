@@ -763,6 +763,7 @@ MonoBehaviour:
   startLevel: Level 1
   levelSelect: Level Select
   playerLives: 5
+  playerHealth: 5
 --- !u!1 &1687496229
 GameObject:
   m_ObjectHideFlags: 0
