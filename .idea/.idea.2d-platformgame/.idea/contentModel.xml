@@ -17,6 +17,7 @@
           <e p="DestroyObjectOverTime.cs" t="Include" />
           <e p="EnemyHealthManager.cs" t="Include" />
           <e p="EnemyPatrol.cs" t="Include" />
+          <e p="EnemyStarController.cs" t="Include" />
           <e p="HealthManager.cs" t="Include" />
           <e p="HurtEnemyOnContact.cs" t="Include" />
           <e p="HurtPlayerOnContact.cs" t="Include" />
@@ -32,6 +33,7 @@
           <e p="PauseMenu.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />
+          <e p="ShootAtPlayerInRange.cs" t="Include" />
           <e p="TimeManager.cs" t="Include" />
         </e>
         <e p="Tiled2Unity" t="Include">

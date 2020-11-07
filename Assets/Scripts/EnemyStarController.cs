@@ -1,21 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class NinjaStarController : MonoBehaviour
+public class EnemyStarController : MonoBehaviour
 {
     public float speed;
 
     public PlayerController player;
 
-    public GameObject enemyDeathEffect;
-
     public GameObject impactEffect;
-
-    public int pointsForKill;
 
     public float rotationSpeed;
     
     public int damageToGive;
-
+    
     private Rigidbody2D myRigidbody2D;
 
     // Start is called before the first frame update
@@ -24,8 +22,8 @@ public class NinjaStarController : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
 
         myRigidbody2D = GetComponent<Rigidbody2D>();
-        
-        if (player.transform.localScale.x < 0)
+        // If player is to the left of the ninja star
+        if (player.transform.position.x < transform.position.x)
         {
             speed = -speed;
             rotationSpeed = -rotationSpeed;
@@ -43,10 +41,9 @@ public class NinjaStarController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // If it's the enemy
-        if (other.tag == "Enemy")
+        if (other.name == "Player")
         {
-            other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
-
+            HealthManager.HurtPlayer(damageToGive);
         }
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
