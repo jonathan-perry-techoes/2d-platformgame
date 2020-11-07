@@ -32,6 +32,7 @@
           <e p="PauseMenu.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />
+          <e p="TimeManager.cs" t="Include" />
         </e>
         <e p="Tiled2Unity" t="Include">
           <e p="Imported" t="Include">

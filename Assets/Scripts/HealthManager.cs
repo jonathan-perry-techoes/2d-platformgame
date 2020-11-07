@@ -14,11 +14,14 @@ public class HealthManager : MonoBehaviour
 
     private LifeManager lifeSystem;
 
+    private TimeManager theTime;
+
     // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<Text>();
         playerHealth = PlayerPrefs.GetInt("PlayerCurrentHealth");
+        theTime = FindObjectOfType<TimeManager>();
         levelManager = FindObjectOfType<LevelManager>();
         lifeSystem = FindObjectOfType<LifeManager>();
         isDead = false;
@@ -33,6 +36,8 @@ public class HealthManager : MonoBehaviour
             levelManager.RespawnPlayer();
             lifeSystem.TakeLife();
             isDead = true;
+            // Reset the time
+            theTime.ResetTime();
         }
         text.text = "" + playerHealth;
     }
@@ -47,5 +52,10 @@ public class HealthManager : MonoBehaviour
     {
         playerHealth = PlayerPrefs.GetInt("PlayerMaxHealth");
         PlayerPrefs.SetInt("PlayerCurrentHealth", playerHealth);
+    }
+
+    public void KillPlayer()
+    {
+        playerHealth = 0;
     }
 }
