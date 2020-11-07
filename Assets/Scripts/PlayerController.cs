@@ -55,7 +55,8 @@ public class PlayerController : MonoBehaviour
             doubleJumped = false;
 
         anim.SetBool("Grounded", grounded);
-
+        
+#if UNITY_STANDALONE || UNITY_WEBPLAYER
         if (Input.GetButtonDown("Jump") && grounded)
         {
             // Make it jump!
@@ -69,8 +70,9 @@ public class PlayerController : MonoBehaviour
         }
 
         // Get movement from horizontal axis
-        moveVelocity = moveSpeed * Input.GetAxisRaw("Horizontal");
-
+        Move(Input.GetAxisRaw("Horizontal"));
+#endif
+        
         if (knockbackCount <= 0)
         {
             myrigidbody2D.velocity = new Vector2(moveVelocity, myrigidbody2D.velocity.y);
@@ -91,10 +93,12 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
         else if (myrigidbody2D.velocity.x < 0)
             transform.localScale = new Vector3(-1f, 1f, 1f);
+        
+#if UNITY_STANDALONE || UNITY_WEBPLAYER
 
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(ninjaStar, firePoint.position, firePoint.rotation);
+            FireStar();
             shotDelayCounter = shotDelay;
         }
 
@@ -105,17 +109,19 @@ public class PlayerController : MonoBehaviour
             if (shotDelayCounter <= 0)
             {
                 shotDelayCounter = shotDelay;
-                Instantiate(ninjaStar, firePoint.position, firePoint.rotation);
+                FireStar();
             }
         }
 
         if (anim.GetBool("Sword"))
-            anim.SetBool("Sword", false);
+            ResetSword();
 
         if (Input.GetButtonDown("Fire2"))
         {
-            anim.SetBool("Sword", true);
+            Sword();
         }
+        
+#endif
         // If on ladder
         if (onLadder)
         {
@@ -132,9 +138,39 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Move(float moveInput)
+    {
+        moveVelocity = moveSpeed * moveInput;
+    }
+
+    public void FireStar()
+    {
+        Instantiate(ninjaStar, firePoint.position, firePoint.rotation);
+    }
+
+    public void Sword()
+    {
+        anim.SetBool("Sword", true);
+    }
+
+    public void ResetSword()
+    {
+        anim.SetBool("Sword", false);
+
+    }
+
     public void Jump()
     {
         myrigidbody2D.velocity = new Vector2(myrigidbody2D.velocity.x, jumpHeight);
+        if (grounded)
+        {
+            myrigidbody2D.velocity = new Vector2(myrigidbody2D.velocity.x, jumpHeight);        }
+
+        if (!doubleJumped && !grounded)
+        {
+            myrigidbody2D.velocity = new Vector2(myrigidbody2D.velocity.x, jumpHeight);
+            doubleJumped = true;
+        }
     } 
     void OnCollisionEnter2D(Collision2D other)
     { 

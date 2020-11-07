@@ -35,6 +35,7 @@
           <e p="ScoreManager.cs" t="Include" />
           <e p="ShootAtPlayerInRange.cs" t="Include" />
           <e p="TimeManager.cs" t="Include" />
+          <e p="TouchControls.cs" t="Include" />
         </e>
         <e p="Tiled2Unity" t="Include">
           <e p="Imported" t="Include">

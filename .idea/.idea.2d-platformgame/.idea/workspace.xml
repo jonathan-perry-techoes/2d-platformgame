@@ -4,10 +4,8 @@
     <list default="true" id="6130fd54-3cac-4f2e-b740-8c9540898776" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/GPJ_2D_Platformer_Sprites.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/GPJ_2D_Platformer_Sprites.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NinjaStarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NinjaStarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,17 +15,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TouchControls.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/MovingPlatform.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LifeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TimeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NinjaStarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyStarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShootAtPlayerInRange.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TouchControls.cs" />
       </list>
     </option>
   </component>
@@ -80,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604746924407</updated>
-      <workItem from="1604746933678" duration="6222000" />
+      <workItem from="1604746933678" duration="8365000" />
     </task>
     <servers />
   </component>
@@ -93,9 +95,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="748" y="123" width="592" height="601" key="VCS.FileHistoryDialog" timestamp="1604750115910">
+    <state x="748" y="123" width="592" height="601" key="VCS.FileHistoryDialog" timestamp="1604759060012">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state x="748" y="123" width="592" height="601" key="VCS.FileHistoryDialog/0.23.1440.801@0.23.1440.801" timestamp="1604750115910" />
+    <state x="748" y="123" width="592" height="601" key="VCS.FileHistoryDialog/0.23.1440.801@0.23.1440.801" timestamp="1604759060012" />
   </component>
 </project>
