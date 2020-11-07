@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -133,6 +134,22 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        myrigidbody2D.velocity = new Vector2(0, jumpHeight);
+        myrigidbody2D.velocity = new Vector2(myrigidbody2D.velocity.x, jumpHeight);
+    } 
+    void OnCollisionEnter2D(Collision2D other)
+    { 
+        if (other.transform.tag == "MovingPlatform")
+        {
+            transform.parent = other.transform;
+        }
     }
+    
+    void OnCollisionExit2D(Collision2D other)
+    { 
+        if (other.transform.tag == "MovingPlatform")
+        {
+            transform.parent = null;
+        }
+    }
+
 }
