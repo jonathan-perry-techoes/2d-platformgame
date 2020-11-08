@@ -18,6 +18,7 @@
           <e p="EnemyHealthManager.cs" t="Include" />
           <e p="EnemyPatrol.cs" t="Include" />
           <e p="EnemyStarController.cs" t="Include" />
+          <e p="FlyerEnemyMove.cs" t="Include" />
           <e p="HealthManager.cs" t="Include" />
           <e p="HurtEnemyOnContact.cs" t="Include" />
           <e p="HurtPlayerOnContact.cs" t="Include" />
