@@ -30,6 +30,7 @@
           <e p="MainMenu.cs" t="Include" />
           <e p="MovingPlatform.cs" t="Include" />
           <e p="NinjaStarController.cs" t="Include" />
+          <e p="Parallax.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />

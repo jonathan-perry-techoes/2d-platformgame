@@ -4,8 +4,9 @@
     <list default="true" id="6130fd54-3cac-4f2e-b740-8c9540898776" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/GPJ_2D_Platformer_Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/GPJ_2D_Platformer_Background.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +31,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ShootAtPlayerInRange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TouchControls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Parallax.cs" />
       </list>
     </option>
   </component>
@@ -82,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604746924407</updated>
-      <workItem from="1604746933678" duration="8365000" />
+      <workItem from="1604746933678" duration="9466000" />
     </task>
     <servers />
   </component>
