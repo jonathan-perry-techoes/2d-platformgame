@@ -6,7 +6,8 @@ public class HealthManager : MonoBehaviour
     public int maxPlayerHealth;
     public static int playerHealth;
 
-    Text text;
+    // Slider object
+    public Slider healthBar;
 
     private LevelManager levelManager;
 
@@ -19,7 +20,7 @@ public class HealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        text = GetComponent<Text>();
+        healthBar = GetComponent<Slider>();
         playerHealth = PlayerPrefs.GetInt("PlayerCurrentHealth");
         theTime = FindObjectOfType<TimeManager>();
         levelManager = FindObjectOfType<LevelManager>();
@@ -39,7 +40,12 @@ public class HealthManager : MonoBehaviour
             // Reset the time
             theTime.ResetTime();
         }
-        text.text = "" + playerHealth;
+
+        if (playerHealth > maxPlayerHealth)
+            playerHealth = maxPlayerHealth;
+
+        // Change value of health bar
+        healthBar.value = playerHealth;
     }
 
     public static void HurtPlayer(int damageToGive)
