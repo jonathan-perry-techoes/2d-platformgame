@@ -31,11 +31,7 @@ public class LifeManager : MonoBehaviour
     {
         if (lifeCounter < 0)
         {
-            // Activate game over screen
-            gameOverScreen.SetActive(true);
-            // De-activate player
-            player.gameObject.SetActive(false);
-        }
+         }
         theText.text = "x " + lifeCounter;
 
         if (gameOverScreen.activeSelf)

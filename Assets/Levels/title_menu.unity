@@ -764,6 +764,7 @@ MonoBehaviour:
   levelSelect: Level Select
   playerLives: 3
   playerHealth: 5
+  level1Tag: level1lock
 --- !u!1 &1687496229
 GameObject:
   m_ObjectHideFlags: 0

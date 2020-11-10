@@ -6,7 +6,9 @@ public class LevelLoader : MonoBehaviour
     public bool playerInZone;
 
     public string levelToLoad;
-    // Start is called before the first frame update
+
+    public string levelTag;
+    
     void Start()
     {
         playerInZone = false;
@@ -17,12 +19,14 @@ public class LevelLoader : MonoBehaviour
     {
         if (Input.GetAxisRaw("Vertical") > 0 && playerInZone)
         {
-            SceneManager.LoadScene(levelToLoad);
+            LoadLevel();
         }
     }
 
     public void LoadLevel() 
     {
+        // Unlock the next level
+        PlayerPrefs.SetInt(levelTag, 1);
         SceneManager.LoadScene(levelToLoad);
     }
 

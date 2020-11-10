@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
     public int playerLives;
 
     public int playerHealth;
+    
+    public string level1Tag;
 
     public void NewGame()
     {
@@ -18,6 +20,8 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("CurrentPlayerScore", 0);
         PlayerPrefs.SetInt("PlayerCurrentHealth", playerHealth);
         PlayerPrefs.SetInt("PlayerMaxHealth", playerHealth);
+        // Set the level 1 as the default
+        PlayerPrefs.SetInt(level1Tag, 1);
         // Load level after setting lives/score
         SceneManager.LoadScene(startLevel);
     }
@@ -29,6 +33,9 @@ public class MainMenu : MonoBehaviour
         // Set the player current health
         PlayerPrefs.SetInt("PlayerCurrentHealth", playerHealth);
         PlayerPrefs.SetInt("PlayerMaxHealth", playerHealth);
+        // Unlock first level
+        PlayerPrefs.SetInt(level1Tag, 1);
+        // Load level select scene
         SceneManager.LoadScene(levelSelect);
 
     }

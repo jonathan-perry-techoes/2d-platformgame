@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4036584236108592218
-    second: Enemy_1
+    second: random
   - first:
       213: 4645372706175723018
-    second: GPJ_2D_Platformer_Sprites_1
+    second: Level_Select_2
   - first:
       213: 8270101039369264690
     second: Ground
@@ -28,10 +28,10 @@ TextureImporter:
     second: Coin_1
   - first:
       213: -8526255041926566715
-    second: GPJ_2D_Platformer_Sprites_8
+    second: Level_Select_3
   - first:
       213: -2579309092437313543
-    second: Enemy_1
+    second: random
   - first:
       213: 7580190869000698296
     second: Enemy_2
@@ -76,6 +76,27 @@ TextureImporter:
     second: HealthPickup
   - first:
       213: -2536845424647630692
+    second: random
+  - first:
+      213: -2536845424647630692
+    second: random
+  - first:
+      213: -2579309092437313543
+    second: Level_Select_Lock
+  - first:
+      213: -2536845424647630692
+    second: random
+  - first:
+      213: -2536845424647630692
+    second: random
+  - first:
+      213: -2536845424647630692
+    second: random
+  - first:
+      213: -2536845424647630692
+    second: Level_Select_1
+  - first:
+      213: 2456022741022975690
     second: Enemy_1
   externalObjects: {}
   serializedVersion: 11
@@ -596,6 +617,90 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Level_Select_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c909dcde6805bccd0800000000000000
+      internalID: -2536845424647630692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_Select_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0626e03ddda77040800000000000000
+      internalID: 4645372706175723018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_Select_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc6591a638aca980800000000000000
+      internalID: -8526255041926566715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_Select_Lock
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 19
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7b653db04743cd0800000000000000
+      internalID: -2579309092437313543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Enemy_1
       rect:
         serializedVersion: 2
@@ -610,8 +715,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c909dcde6805bccd0800000000000000
-      internalID: -2536845424647630692
+      spriteID: ac6a4fe9bab851220800000000000000
+      internalID: 2456022741022975690
       vertices: []
       indices: 
       edges: []

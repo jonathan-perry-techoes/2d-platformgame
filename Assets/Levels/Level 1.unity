@@ -1668,6 +1668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInZone: 0
   levelToLoad: Level Select
+  levelTag: level2lock
 --- !u!1 &212003963
 GameObject:
   m_ObjectHideFlags: 0
