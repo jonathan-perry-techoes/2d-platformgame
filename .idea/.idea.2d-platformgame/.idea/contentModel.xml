@@ -20,6 +20,7 @@
           <e p="EnemyStarController.cs" t="Include" />
           <e p="FlyerEnemyMove.cs" t="Include" />
           <e p="HealthManager.cs" t="Include" />
+          <e p="HealthPickup.cs" t="Include" />
           <e p="HurtEnemyOnContact.cs" t="Include" />
           <e p="HurtPlayerOnContact.cs" t="Include" />
           <e p="KillPlayer.cs" t="Include" />
