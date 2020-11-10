@@ -4,10 +4,15 @@ public class TouchControls : MonoBehaviour
 {
     private PlayerController thePlayer;
 
+    private LevelLoader levelExit;
+
+    private PauseMenu thePauseMenu;
 
     void Start()
     {
         thePlayer = FindObjectOfType<PlayerController>();
+        levelExit = FindObjectOfType<LevelLoader>();
+        thePauseMenu = FindObjectOfType<PauseMenu>();
     }
 
     public void LeftArrow()
@@ -43,5 +48,15 @@ public class TouchControls : MonoBehaviour
     public void Jump()
     {
         thePlayer.Jump();
+
+        if (levelExit.playerInZone)
+        {
+            levelExit.LoadLevel();
+        }
+    }
+
+    public void Pause()
+    {
+        thePauseMenu.PauseUnpause();
     }
 }
