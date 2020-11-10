@@ -640,6 +640,13 @@ MonoBehaviour:
   - {fileID: 1662115009}
   - {fileID: 294921037}
   levelUnlocked: 000000
+  positionSelector: 0
+  distanceBelowLock: -2
+  levelName:
+  - Level 1
+  - Level 2
+  - Level 3
+  moveSpeed: 20
 --- !u!1 &1662115009
 GameObject:
   m_ObjectHideFlags: 0
