@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6130fd54-3cac-4f2e-b740-8c9540898776" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy_Walk.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/GPJ_2D_Platformer_Sprites.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/GPJ_2D_Platformer_Sprites.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604746924407</updated>
-      <workItem from="1604746933678" duration="11508000" />
+      <workItem from="1604746933678" duration="11751000" />
     </task>
     <servers />
   </component>
@@ -103,5 +103,9 @@
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="748" y="123" width="592" height="601" key="VCS.FileHistoryDialog/0.23.1440.801@0.23.1440.801" timestamp="1604759060012" />
+    <state x="14" y="53" width="721" height="735" key="find.popup" timestamp="1605007189517">
+      <screen x="0" y="23" width="1440" height="795" />
+    </state>
+    <state x="14" y="53" width="721" height="735" key="find.popup/0.23.1440.795@0.23.1440.795" timestamp="1605007189517" />
   </component>
 </project>
