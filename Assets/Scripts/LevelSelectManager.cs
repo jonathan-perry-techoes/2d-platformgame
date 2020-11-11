@@ -16,6 +16,8 @@ public class LevelSelectManager : MonoBehaviour
     public float moveSpeed;
 
     private bool isPressed;
+
+    public bool touchMode;
     
     private void Start()
     {
@@ -40,6 +42,8 @@ public class LevelSelectManager : MonoBehaviour
                 locks[i].SetActive(false);
             }
         }
+        // Get the position to start at from playerprefs
+        positionSelector = PlayerPrefs.GetInt("PlayerLevelSelectPosition");
 
         transform.position = locks[positionSelector].transform.position + new Vector3(0, distanceBelowLock, 0);
     }
@@ -88,8 +92,12 @@ public class LevelSelectManager : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
         {
-            if (levelUnlocked[positionSelector])
+            // Load up the level if not in touch mode
+            if (levelUnlocked[positionSelector] && !touchMode)
             {
+                // Set the level to return to
+                PlayerPrefs.SetInt("PlayerLevelSelectPosition", positionSelector);
+                // Load scene
                 SceneManager.LoadScene(levelName[positionSelector]);
             }
         }

@@ -28,6 +28,7 @@
           <e p="LevelLoader.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />
           <e p="LevelSelectManager.cs" t="Include" />
+          <e p="LevelSelectTouch.cs" t="Include" />
           <e p="LifeManager.cs" t="Include" />
           <e p="LifePickup.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />

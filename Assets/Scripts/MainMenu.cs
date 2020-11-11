@@ -22,6 +22,8 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("PlayerMaxHealth", playerHealth);
         // Set the level 1 as the default
         PlayerPrefs.SetInt(level1Tag, 1);
+        // Set position selector to first position by default
+        PlayerPrefs.SetInt("PlayerLevelSelectPosition", 0);
         // Load level after setting lives/score
         SceneManager.LoadScene(startLevel);
     }
@@ -35,6 +37,12 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("PlayerMaxHealth", playerHealth);
         // Unlock first level
         PlayerPrefs.SetInt(level1Tag, 1);
+
+        if (!PlayerPrefs.HasKey("PlayerLevelSelectPosition"))
+        {
+            PlayerPrefs.SetInt("PlayerLevelSelectPosition", 0);
+        }
+        
         // Load level select scene
         SceneManager.LoadScene(levelSelect);
 
