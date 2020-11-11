@@ -25,7 +25,7 @@ public class EnemyHealthManager : MonoBehaviour
         }
     }
 
-    public void giveDamage(int damageToGive)
+    public void GiveDamage(int damageToGive)
     {
         enemyHealth -= damageToGive;
         GetComponent<AudioSource>().Play();

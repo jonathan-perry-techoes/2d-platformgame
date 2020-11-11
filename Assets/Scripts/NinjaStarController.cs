@@ -45,10 +45,16 @@ public class NinjaStarController : MonoBehaviour
         // If it's the enemy
         if (other.tag == "Enemy")
         {
-            other.GetComponent<EnemyHealthManager>().giveDamage(damageToGive);
-
+            other.GetComponent<EnemyHealthManager>().GiveDamage(damageToGive);
         }
+
+        if (other.tag == "Boss")
+        {
+            other.GetComponent<BossHealthManager>().GiveDamage(damageToGive);
+        }
+        // Create an effect
         Instantiate(impactEffect, transform.position, transform.rotation);
+        // Destroy
         Destroy(gameObject);
     }
 }

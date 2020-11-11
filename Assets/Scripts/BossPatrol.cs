@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyPatrol : MonoBehaviour
+public class BossPatrol : MonoBehaviour
 {
     public float moveSpeed;
     public bool moveRight;
@@ -15,10 +13,16 @@ public class EnemyPatrol : MonoBehaviour
     private bool notAtEdge;
     public Transform edgeCheck;
 
+    private Rigidbody2D myrigidbody2D;
+
+    private float ySize;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        // Get rigidbody to increase efficiency
+        myrigidbody2D = GetComponent<Rigidbody2D>();
+        ySize = transform.localScale.y;
     }
 
     // Update is called once per frame
@@ -34,14 +38,13 @@ public class EnemyPatrol : MonoBehaviour
 
         if (moveRight)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            transform.localScale = new Vector3(-ySize, transform.localScale.y, transform.localScale.z);
+            myrigidbody2D.velocity = new Vector2(moveSpeed, myrigidbody2D.velocity.y);
         }
         else
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-
+            transform.localScale = new Vector3(ySize, transform.localScale.y, transform.localScale.z);
+            myrigidbody2D.velocity = new Vector2(-moveSpeed, myrigidbody2D.velocity.y);
         }
     }
 }

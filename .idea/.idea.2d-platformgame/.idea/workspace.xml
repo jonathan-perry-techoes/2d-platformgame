@@ -4,11 +4,14 @@
     <list default="true" id="6130fd54-3cac-4f2e-b740-8c9540898776" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2d-platformgame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/Level Select.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levels/Level Select.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelSelectManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelSelectManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/GPJ_2D_Platformer_Boss.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/GPJ_2D_Platformer_Boss.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyHealthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyHealthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyPatrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyPatrol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HurtEnemyOnContact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HurtEnemyOnContact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NinjaStarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NinjaStarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +22,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossWall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TouchControls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FlyerEnemyMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelSelectTouch.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FF095D0D-03D4-40C0-AF6A-AF340BEEA99C/dc/cd143bec/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -29,7 +34,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MovingPlatform.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TimeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NinjaStarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyStarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShootAtPlayerInRange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
@@ -41,6 +45,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelSelectManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelSelectTouch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BossHealthManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyHealthManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NinjaStarController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HurtEnemyOnContact.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyPatrol.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BossPatrol.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BossWall.cs" />
       </list>
     </option>
   </component>
@@ -93,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604746924407</updated>
-      <workItem from="1604746933678" duration="15267000" />
+      <workItem from="1604746933678" duration="18046000" />
     </task>
     <servers />
   </component>
@@ -102,6 +113,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

@@ -9,6 +9,9 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="BossHealthManager.cs" t="Include" />
+          <e p="BossPatrol.cs" t="Include" />
+          <e p="BossWall.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
           <e p="Checkpoint.cs" t="Include" />
           <e p="CoinPickup.cs" t="Include" />
@@ -45,6 +48,7 @@
         <e p="Tiled2Unity" t="Include">
           <e p="Imported" t="Include">
             <e p="_ReadMe.txt" t="Include" />
+            <e p="BossLevel.tiled2unity.xml" t="Include" />
           </e>
           <e p="License.txt" t="Include" />
           <e p="Materials" t="Include">
