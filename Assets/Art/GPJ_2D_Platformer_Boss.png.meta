@@ -123,8 +123,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -145,6 +145,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -326,6 +328,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      GPJ_2D_Platformer_Boss_5: 8938925946494281732
+      GPJ_2D_Platformer_Boss_4: -5486587311078425164
+      GPJ_2D_Platformer_Boss_1: 3321903041608583057
+      GPJ_2D_Platformer_Boss_3: -8802265800930106245
+      GPJ_2D_Platformer_Boss_0: -681941236658382564
+      GPJ_2D_Platformer_Boss_2: -9050874691627741260
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

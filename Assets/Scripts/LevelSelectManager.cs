@@ -21,6 +21,8 @@ public class LevelSelectManager : MonoBehaviour
     
     private void Start()
     {
+        PlayerPrefs.SetInt(levelTags[0], 1);
+        levelUnlocked[0] = true;
         for (int i = 0; i < levelTags.Length; i++)
         {
             // The level is not unlocked yet

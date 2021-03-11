@@ -129,8 +129,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -151,6 +151,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -731,6 +733,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Spikes: 2617501226011934520
+      NinjaStar: -7573448162758238347
+      Flying_3: 2472262563187813513
+      Flying_4: 8248379941234720761
+      Level Exit: 1079164134371101101
+      Player_Walking_2: 6228505547163583314
+      Ladder: -799428881496870636
+      Level_Select_1: -2536845424647630692
+      Player_Walking_1: 525151112250480906
+      Coin_2: 7925188737213966737
+      Flying_1: 6564776309499640511
+      Enemy_2: 7580190869000698296
+      Enemy_3: -7330090807420294860
+      Player: 2291900665083654264
+      Flying_2: -1909485809168917546
+      Level_Select_2: 4645372706175723018
+      Coin_1: -960318310011193017
+      Player_Sword: 6856404424955050984
+      Enemy_Star: -6929640672004428438
+      Level_Select_3: -8526255041926566715
+      Coin_3: 834523443618947226
+      Level_Select_Lock: -2579309092437313543
+      Ground: 8270101039369264690
+      HealthPickup: 6343714972941877800
+      Enemy_1: 2456022741022975690
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
